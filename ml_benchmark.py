@@ -6,7 +6,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 data = pd.read_parquet('data_cleaned.parquet')
-
+data = data.drop(['cat_Ventes'], axis=1)
 X = data.drop(['Ventes'], axis=1)
 y = data['Ventes']
 
