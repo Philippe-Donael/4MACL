@@ -40,6 +40,9 @@ plt.show()
 # roc curve
 y_pred_proba = clf.predict_proba(X_test)[::, 1]
 fpr, tpr, _ = roc_curve(y_test, y_pred_proba, pos_label=2)
+# add labels
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
 plt.plot(fpr, tpr)
 plt.show()
 
